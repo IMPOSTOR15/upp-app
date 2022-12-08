@@ -87,6 +87,7 @@ header {
 }
 
 nav {
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center; 
@@ -143,10 +144,6 @@ nav a.router-link-exact-active {
   transition: background-color 0.3s ease 0s;
   color: #edf0f1;
   background-color: #6253FF;
-}
-
-.btn-container {
-  
 }
 
 .btn-text {
