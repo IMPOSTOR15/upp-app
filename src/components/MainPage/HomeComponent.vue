@@ -16,21 +16,31 @@
       <img src="@/assets/mainPageImages/mainphoto.svg" alt="">
     </div>
   </div>
+  <FirstSlideComponent/>
+  <SecondSlideComponent/>
+  
 </template>
 
 <script>
+import FirstSlideComponent from '@/components/MainPage/Slides/FirstSlideComponent.vue'
+import SecondSlideComponent from '@/components/MainPage/Slides/SecondSlideComponent.vue'
 export default {
-
+  components: {
+    FirstSlideComponent,
+    SecondSlideComponent
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .main-container {
-  margin-top: 70px;
-  margin-bottom: 11170px;
   display: flex;
   flex-direction: row;
+  margin: 70px auto 0 auto;
+  max-width: 79vw;
+  height: 90vh;
+  max-height: 90vh;
 }
 
 h1 {

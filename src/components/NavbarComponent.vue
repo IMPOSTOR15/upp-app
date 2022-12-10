@@ -71,6 +71,9 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  max-width: 79vw;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .logo {
