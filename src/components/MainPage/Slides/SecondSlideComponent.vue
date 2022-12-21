@@ -1,7 +1,6 @@
 <template>
   <div class="main-wrapper">
     <div class="left-block">
-      <!-- <img class="bg-img" src="@/assets/mainPageImages/secondSlide/productsblockbg.png" alt=""> -->
       <div class="content-block">
         <div class="text-block">
           <h1>Продукты</h1>
@@ -12,32 +11,62 @@
     <div class="right-block">
       <div class="images-wrapper">
         <div class="img-card">
-          <img src="@/assets/mainPageImages/secondSlide/cards/first.png" alt="">
-          <p>Фрукты</p>
+          <img class="image" src="@/assets/mainPageImages/secondSlide/cards/first.png" alt="">
+          <div class="card-block">
+            <div class="card-top-block"></div>
+            <div class="card-bottom-block">
+              <p class="card-text">Фрукты</p>
+            </div>
+          </div>
         </div>
         <div class="img-card">
-          <img src="@/assets/mainPageImages/secondSlide/cards/second.png" alt="">
-          <p>Рыба</p>
+          <img class="image" src="@/assets/mainPageImages/secondSlide/cards/second.png" alt="">
+          <div class="card-block">
+            <div class="card-top-block"></div>
+            <div class="card-bottom-block">
+              <p class="card-text">Рыба</p>
+            </div>
+          </div>
         </div>
         <div class="img-card">
-          <img src="@/assets/mainPageImages/secondSlide/cards/third.png" alt="">
-          <p>Орехи</p>
+          <img class="image" src="@/assets/mainPageImages/secondSlide/cards/third.png" alt="">
+          <div class="card-block">
+            <div class="card-top-block"></div>
+            <div class="card-bottom-block">
+              <p class="card-text">Орехи</p>
+            </div>
+          </div>
         </div>
         <div class="img-card">
-          <img src="@/assets/mainPageImages/secondSlide/cards/fourth.png" alt="">
-          <p>Яйца и молочные</p>
+          <img class="image" src="@/assets/mainPageImages/secondSlide/cards/fourth.png" alt="">
+          <div class="card-block">
+            <div class="card-top-block"></div>
+            <div class="card-bottom-block">
+              <p class="card-text">Яйца и молочные</p>
+            </div>
+          </div>
         </div>
         <div class="img-card">
-          <img src="@/assets/mainPageImages/secondSlide/cards/fifth.png" alt="">
-          <p>Мясо птицы</p>
+          <img class="image" src="@/assets/mainPageImages/secondSlide/cards/fifth.png" alt="">
+          <div class="card-block">
+            <div class="card-top-block"></div>
+            <div class="card-bottom-block">
+              <p class="card-text">Мясо птицы</p>
+            </div>
+          </div>
         </div>
         <div class="img-card">
-          <img src="@/assets/mainPageImages/secondSlide/cards/sixth.png" alt="">
-          <p>Полезные завтраки</p>
+          <img class="image" src="@/assets/mainPageImages/secondSlide/cards/sixth.png" alt="">
+          <div class="card-block">
+            <div class="card-top-block"></div>
+            <div class="card-bottom-block">
+              <p class="card-text">Полезные завтраки</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="button-wrapper">
-        <button>Смотреть рецепты</button>
+        <button class="recipes-btn">Смотреть рецепты</button>
       </div>
     </div>
     <img class="bigcircle" src="@/assets/mainPageImages/secondSlide/bigcircle.svg" alt="">
@@ -58,6 +87,7 @@ export default {
   background-color: #fff;
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap; */
   justify-content: space-around;
   height: 100vh;
   margin: 70px auto 0 auto;
@@ -66,8 +96,9 @@ export default {
 .left-block {
   display: flex;
   justify-content: center;
-  background: #fff url(@/assets/mainPageImages/secondSlide/productsblockbg.png);
+  background: transparent url(@/assets/mainPageImages/secondSlide/productsblockbg.png);
   margin: 7vh 0;
+  border-radius: 20px;
   z-index: 2;
 }
 
@@ -85,8 +116,79 @@ export default {
   margin: auto
 }
 .right-block {
-  margin: 7vh 30px;
+  margin: 7vh 70px;
   z-index: 2;
+}
+
+.img-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  max-width: 288px;
+  max-height: 200px;
+  margin: 14px 13px;
+  cursor: pointer;
+}
+.card-block {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;;
+}
+.card-block:hover {
+  opacity: 1;
+}
+.card-top-block {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 130px;
+  width: 91.5%;
+  
+}
+.card-bottom-block {
+  position: absolute;
+  bottom: 14px;
+  left: 10px;
+  width: 91.5%;
+  height: 50px;
+  border-radius: 0 0 10px 10px;
+  background-color: #6253FF;
+  
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.recipes-btn {
+  border: 3px solid #6253FF;
+  border-radius: 20px;
+  width: 550px;
+  height: 70px;
+  background: transparent;
+  font-size: 16px;
+  color: #6253FF;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  
+
+}
+
+.recipes-btn:hover {
+  color: #fff;
+  background: #6253FF;
+}
+
+
+.card-text {
+  z-index: 3;
+  background-color:#6253FF;
+  color: #fff;
+}
+.image {
+  max-width: 288px;
+  max-height: 200px;
 }
 .images-wrapper {
   display: flex;

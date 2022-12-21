@@ -74,6 +74,7 @@ header {
   max-width: 79vw;
   margin: 0 auto;
   margin-top: 40px;
+  z-index: 9;
 }
 
 .logo {
