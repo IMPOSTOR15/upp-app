@@ -87,7 +87,6 @@ export default {
   background-color: #fff;
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   justify-content: space-around;
   height: 100vh;
   margin: 70px auto 0 auto;
@@ -96,7 +95,10 @@ export default {
 .left-block {
   display: flex;
   justify-content: center;
-  background: transparent url(@/assets/mainPageImages/secondSlide/productsblockbg.png);
+  width: 2050px;
+  height: 800px;
+  background-image: url(@/assets/mainPageImages/secondSlide/productsblockbg.png);
+  background-repeat: no-repeat;
   margin: 7vh 0;
   border-radius: 20px;
   z-index: 2;
@@ -106,9 +108,10 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: #6253FF;
-  width: 40vw;
+  width: 100%;
   height: 20vh;
   margin: auto 0;
+  margin-left: 12px;
 }
 .text-block {
   color: #fff;
@@ -125,9 +128,8 @@ export default {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  max-width: 288px;
-  max-height: 200px;
-  margin: 14px 13px;
+  /* max-width: 288px;
+  max-height: 200px; */
   cursor: pointer;
 }
 .card-block {
@@ -194,6 +196,7 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .mediumcircle {

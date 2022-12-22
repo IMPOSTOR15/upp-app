@@ -18,16 +18,22 @@
   </div>
   <FirstSlideComponent/>
   <SecondSlideComponent/>
+  <ThirdSlideComponent/>
+  <FouthSlideComponent/>
   
 </template>
 
 <script>
 import FirstSlideComponent from '@/components/MainPage/Slides/FirstSlideComponent.vue'
 import SecondSlideComponent from '@/components/MainPage/Slides/SecondSlideComponent.vue'
+import ThirdSlideComponent from '@/components/MainPage/Slides/ThirdSlideComponent.vue'
+import FouthSlideComponent from '@/components/MainPage/Slides/FourthSlideComponent.vue'
 export default {
   components: {
     FirstSlideComponent,
-    SecondSlideComponent
+    SecondSlideComponent,
+    ThirdSlideComponent,
+    FouthSlideComponent
   }
 }
 </script>

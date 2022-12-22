@@ -69,7 +69,6 @@ export default {
   position: relative;
   display: flex;
   justify-content: center;
-  margin: auto;
   min-width: 100%;
   background: #B1A9FF;
   flex-direction: column;
@@ -88,7 +87,6 @@ export default {
   font-size: 40px;
   font-weight: bold;
   color: #fff;
-  /* margin-bottom: 70px; */
 }
 
 .function-container {

@@ -63,17 +63,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 30px 10%; */
-  /* background-color: #27272c; */
   margin-top: 20px;
   opacity: 96%;
   height: 65px;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 15px;
   max-width: 79vw;
   margin: 0 auto;
-  margin-top: 40px;
   z-index: 9;
 }
 
@@ -95,7 +92,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center; 
-  /* border: 2px solid black; */
   border-radius: 10px; 
   height: 58px;
   -webkit-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
