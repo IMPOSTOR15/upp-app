@@ -111,7 +111,6 @@ export default {
   width: 100%;
   height: 20vh;
   margin: auto 0;
-  margin-left: 12px;
 }
 .text-block {
   color: #fff;
