@@ -100,11 +100,12 @@ export default {
 <style scoped>
 .main-wrapper {
   position: relative;
-  margin-top: 300px;
+  margin-bottom: 167px;
 }
 .header-text {
   font-size: 32px;
   font-weight: bold;
+  margin: 400px 0 94px 0;
 }
 .cards-block {
   display: flex;
@@ -158,7 +159,7 @@ export default {
   font-size: 16px;
 }
 .btn-wrapper {
-  margin: 40px 0;
+  margin-top: 40px;
 }
 
 .more-btn {
@@ -184,13 +185,13 @@ export default {
 .left-circle {
   position: absolute;
   left: 0px;
-  top: 60%;
+  top: 75%;
   overflow: hidden;
 }
 .right-circle {
   position: absolute;
   right: 0px;
-  top: 10%;
+  top: 5%;
   overflow: hidden;
 }
 </style>
