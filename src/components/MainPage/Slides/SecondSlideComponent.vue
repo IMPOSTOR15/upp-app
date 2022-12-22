@@ -165,7 +165,7 @@ export default {
 }
 .recipes-btn {
   border: 3px solid #6253FF;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 550px;
   height: 70px;
   background: transparent;
@@ -173,8 +173,6 @@ export default {
   color: #6253FF;
   cursor: pointer;
   transition: all 0.5s ease-out;
-  
-
 }
 
 .recipes-btn:hover {

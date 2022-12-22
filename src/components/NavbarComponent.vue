@@ -1,7 +1,7 @@
 <template>
 <header>
   <a class="logo" href="/">
-    <img class="logoimg" width="97" height="65" src="../assets/logo.png" alt="logo">
+    <img class="logoimg" width="97" height="65" src="../assets/NavLogo.png" alt="logo">
   </a>
   <div class="nav-container">
     <nav>
@@ -144,6 +144,12 @@ nav a.router-link-exact-active {
   transition: background-color 0.3s ease 0s;
   color: #edf0f1;
   background-color: #6253FF;
+  transition: 0.3s all ease-out;
+}
+.cta:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
 }
 
 .btn-text {

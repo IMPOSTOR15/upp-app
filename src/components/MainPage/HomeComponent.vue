@@ -90,11 +90,17 @@ h1 {
   width: 320px;
   height: 80px;
   color: #edf0f1;
-  background-color: #6253FF;
-}
-
-.btn-text {
   font-size: 20px;
   font-family: 'Exo 2', sans-serif;
+  background-color: #6253FF;
+  transition: 0.3s all ease-out;
 }
+
+.header-btn:hover {
+  font-size: 22px;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
+}
+
 </style>

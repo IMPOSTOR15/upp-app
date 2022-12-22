@@ -122,10 +122,17 @@ export default {
   height: 200px;
   width: 200px;
   margin: auto;
-  border-radius: 10px; 
-  -webkit-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
-  -moz-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
-  box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(98, 83, 255, 0.38);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(98, 83, 255, 0.38);
+  box-shadow: 0px 0px 10px 0px rgba(98, 83, 255, 0.38);
+  transition: 0.5s all ease-in-out;
+}
+.bottom-card:hover, .top-card:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.38);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.38);
+  box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.38);
 }
 
 .bigdarkcircle {

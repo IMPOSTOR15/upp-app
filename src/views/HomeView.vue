@@ -3,6 +3,7 @@
   <div class="home">
     <Navbar/>
     <HomeComponent/>
+    <Footer/>
   </div>
 </template>
 
@@ -10,12 +11,13 @@
 // @ is an alias to /src
 import HomeComponent from '@/components/MainPage/HomeComponent.vue'
 import Navbar from '@/components/NavbarComponent.vue'
-
+import Footer from '@/components/FooterComponent.vue'
 export default {
   name: 'HomeView',
   components: {
     HomeComponent,
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>

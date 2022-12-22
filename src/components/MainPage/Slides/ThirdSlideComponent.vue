@@ -81,12 +81,13 @@ export default {
   }
 
   .bottom-left-block {
-    margin-top: 80px;
-    width: 400px;
+    margin: 80px 20px 0 20px;
+    width: 442px;
     text-align: left;
   }
 
   .bottom-right-block {
+    margin: 0px 20px 0 20px;
     width: 442px;
     text-align: left;
   }
@@ -121,13 +122,12 @@ export default {
     font-size: 20px;
     border-radius: 10px;
     transition: all 0.5s ease-out;;
+    cursor: pointer;
   }
 
   .right-button:hover {
-
     background: #6253FF;
     color: #fff;
-
   }
   .background-color {
     position: absolute;
