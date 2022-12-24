@@ -1,12 +1,10 @@
 <template>
 <header>
-  <a class="logo" href="/">
-    <img class="logoimg" width="97" height="65" src="../assets/NavLogo.png" alt="logo">
-  </a>
+
   <div class="nav-container">
 
     <a class="logo" href="/">
-      <img class="logoimg" src="../assets/logo.png" alt="logo">
+      <img class="logoimg" src="../assets/NavLogo.png" alt="logo">
     </a>
 
     <input id="menu__toggle" type="checkbox"/>
@@ -124,13 +122,16 @@ header {
   display: flex;
   
   align-items: center;
+  /* padding: 30px 10%; */
+  /* background-color: #27272c; */
+
   opacity: 96%;
   position: -webkit-sticky;
   position: sticky;
-  top: 15px;
+  top: 0;
   max-width: 79vw;
   margin: 0 auto;
-
+  z-index: 9;
 }
 
 nav{
@@ -141,6 +142,7 @@ nav{
   
   grid-row-start: 1;
   grid-column-start: 2;
+
   border-radius: 10px; 
   height: 58px;
   box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
@@ -148,7 +150,6 @@ nav{
 
 input,.menu__btn,span{
   display: none;
-  z-index: 9;
 }
 
 .logo {
@@ -162,17 +163,26 @@ input,.menu__btn,span{
 
 .nav-container {
   display: grid;
-  margin-top: 40px;
+  margin-top: 15px;
+
   grid-template-columns: 2fr 2fr 1fr;
+
   align-items: center;
   gap: 60px;
-  justify-content: center; 
-  border-radius: 10px; 
-  height: 58px;
-  -webkit-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
-  -moz-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
-  box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
 }
+
+/* nav { */
+  /* background: #fff; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center;  */
+  /* border: 2px solid black; */
+  /* border-radius: 10px;  */
+  /* height: 58px; */
+  /* -webkit-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39); */
+  /* -moz-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39); */
+  /* box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39); */
+/* } */
 
 
 .nav__links a,
@@ -226,12 +236,6 @@ input,.menu__btn,span{
   /* transition: background-color 0.3s ease 0s; */
   color: #edf0f1;
   background-color: #6253FF;
-  transition: 0.3s all ease-out;
-}
-.cta:hover {
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
-  -moz-box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
-  box-shadow: 0px 0px 10px 5px rgba(98, 83, 255, 0.5);
 }
 
 
