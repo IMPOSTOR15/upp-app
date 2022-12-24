@@ -101,6 +101,7 @@ export default {
 .top-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 50px;
   margin: 40px 5vw;
@@ -110,6 +111,7 @@ export default {
 .bottom-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 50px;
   margin: 40px 5vw;

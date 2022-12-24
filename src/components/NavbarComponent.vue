@@ -53,8 +53,6 @@
 </template>
 
 <script>
-import { useStore } from 'vuex'
-
 export default {
   data(){
     return{
@@ -94,15 +92,12 @@ export default {
     })
   },
   setup() {
-    const store = useStore();
     const elem = null;
     const activeElem = null;
 
     return {
-      store,
       elem,
       activeElem,
-      user: store.state.user,
     }
   },
 }
@@ -120,11 +115,7 @@ export default {
 
 header {
   display: flex;
-  
   align-items: center;
-  /* padding: 30px 10%; */
-  /* background-color: #27272c; */
-
   opacity: 96%;
   position: -webkit-sticky;
   position: sticky;
@@ -139,10 +130,8 @@ nav{
   background: #fff;
   align-items: center;
   justify-content: center;
-  
   grid-row-start: 1;
   grid-column-start: 2;
-
   border-radius: 10px; 
   height: 58px;
   box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39);
@@ -153,9 +142,7 @@ input,.menu__btn,span{
 }
 
 .logo {
-
   justify-self: start;
-
   cursor: pointer;
   height: 65px;
   width: 97px;
@@ -164,25 +151,10 @@ input,.menu__btn,span{
 .nav-container {
   display: grid;
   margin-top: 15px;
-
   grid-template-columns: 2fr 2fr 1fr;
-
   align-items: center;
   gap: 60px;
 }
-
-/* nav { */
-  /* background: #fff; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center;  */
-  /* border: 2px solid black; */
-  /* border-radius: 10px;  */
-  /* height: 58px; */
-  /* -webkit-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39); */
-  /* -moz-box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39); */
-  /* box-shadow: 0px 5px 24px -4px rgba(65, 0, 90, 0.39); */
-/* } */
 
 
 .nav__links a,
@@ -202,24 +174,14 @@ input,.menu__btn,span{
   width: 11vw;
 }
 
-/* .nav__links li a {
-  transition: color 0.3s ease 0s;
-} */
 
 .nav__links li a:hover {
   color: #6253FF;
-
   border-bottom: 2.5px solid #6153ff2d;
   padding-bottom: 3px;
   transition: padding-bottom .08s;
 }
 
-
-/* Странная штука */
-/* nav a.router-link-exact-active {
-  border-bottom: 2.5px solid #6253FF;
-  padding-bottom: 3px;
-} */
 
 .btn-container{
   justify-self: end;
@@ -233,7 +195,6 @@ input,.menu__btn,span{
   cursor: pointer;
   width: 200px;
   height: 56px;
-  /* transition: background-color 0.3s ease 0s; */
   color: #edf0f1;
   background-color: #6253FF;
 }
@@ -244,24 +205,10 @@ input,.menu__btn,span{
   display: none;
 }
 
-/* .btn-text {
-  color: #fff;
-  font-size: 19px;
-  text-align: center;
-} */
-
-/* странная штука */
-/* .account-btn {
-  margin-left: -240px;
-  margin-right: 20px;
-} */
-
 @media (max-width: 1200px) {
   .nav-container {
     grid-template-columns: 1fr 3fr 1fr;
-
   }
-
   .cta{
     width: 100px;
   }
@@ -364,13 +311,10 @@ input,.menu__btn,span{
   }
 
   .nav__links_menuName{
-
     font-size: 24px;
     font-weight: 600;
     display: block;
   }
-
-
 }
 
 
