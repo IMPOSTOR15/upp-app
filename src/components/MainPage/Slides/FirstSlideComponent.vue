@@ -77,7 +77,6 @@ export default {
 }
 
 .header-title {
-  position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -87,12 +86,13 @@ export default {
   font-size: 40px;
   font-weight: bold;
   color: #fff;
+  z-index: 2;
 }
 
 .function-container {
   background-color: #fff;
   border-radius: 20px;
-  margin: auto 14vw;
+  margin: 40px 14vw auto 14vw;
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -105,7 +105,6 @@ export default {
   justify-content: space-between;
   padding-top: 50px;
   margin: 40px 5vw;
-  
 }
 
 .bottom-row {
@@ -160,4 +159,41 @@ export default {
   bottom: 100px;
   right: 120px;
 }
+
+@media (max-width: 1200px) {
+  .main-wrapper {
+    height: auto;
+    margin-top: 320px; 
+    /* !!!!!Тут надо подумать!!!! */
+  }
+  .middarkcircle {
+
+    left: auto;
+    right: 0px;
+  }
+  .bigdarkcircle {
+    left: 0px;
+  }
+  .function-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .top-row {
+    padding-top: 0;
+    margin: 40px 2vw 0 2vw;
+  }
+
+  .bottom-row {
+    padding-bottom: 0;
+    margin: 0 2vw 40px 2vw;
+  }
+  .bottom-card, .top-card {
+
+    margin: 10px auto;
+
+  }
+}
+@media (max-width: 980px) {
+
+}  
 </style>

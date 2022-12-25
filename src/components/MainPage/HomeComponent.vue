@@ -46,16 +46,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.page {
-  /* display: flex;
-  margin: 0 auto;
-  flex-direction: column;
-  max-width: 1800px;
-  min-width: 600px; */
-}
 .main-container {
   display: flex;
   justify-content: space-between;
