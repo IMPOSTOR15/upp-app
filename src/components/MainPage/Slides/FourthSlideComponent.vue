@@ -111,7 +111,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 10vw;
 }
 .card {
@@ -123,7 +123,8 @@ export default {
   text-align: left;
   border-radius: 20px;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 20px 20px;
+  background-color: #fff;
   -webkit-box-shadow: 0px 0px 8px 4px rgba(195, 195, 195, 0.38);
   -moz-box-shadow: 0px 0px 8px 4px rgba(195, 195, 195, 0.38);
   box-shadow: 0px 0px 8px 4px rgba(195, 195, 195, 0.38);
@@ -187,11 +188,24 @@ export default {
   left: 0px;
   top: 75%;
   overflow: hidden;
+  z-index: -2;
 }
 .right-circle {
   position: absolute;
   right: 0px;
   top: 5%;
   overflow: hidden;
+  z-index: -2;
 }
+
+@media (max-width: 1200px) {
+  .header-text {
+    margin: 300px 0 50px 0;
+  }
+}
+@media (max-width: 980px) {
+  .header-text {
+    margin: 180px 0 30px 0;
+  }
+}  
 </style>

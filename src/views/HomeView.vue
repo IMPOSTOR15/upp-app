@@ -2,7 +2,7 @@
   
   <div class="home">
     <Navbar/>
-    <HomeComponent/>
+    <HomeComponent class="homepage"/>
     <Footer/>
   </div>
 </template>
@@ -27,6 +27,12 @@ export default {
 .home {
   /* max-width: 79vw; */
   margin: 0 auto;
+  
 }
+
+/* HomeComponent {
+  max-width: 1800px;
+  min-width: 600px;
+} */
 
 </style>

@@ -127,8 +127,6 @@ export default {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  /* max-width: 288px;
-  max-height: 200px; */
   cursor: pointer;
 }
 .card-block {
@@ -209,7 +207,6 @@ export default {
   height: 300px;
   bottom: 0px;
   left: 520px;
-  
 }
 .smallcircle {
   position: absolute;
@@ -218,4 +215,31 @@ export default {
   top: 50px;
   left: -30px;
 }
+
+@media (max-width: 1200px) {
+  .main-wrapper {
+    height: auto;
+    flex-direction: column;
+    margin: 0 auto 70px auto;
+
+  }
+  .left-block {
+    width: 79vw;
+    height: 79vw;
+  }
+  .right-block {
+    margin: 0;
+  }
+  .bigcircle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: 700px;
+    right: -50px;
+    left: auto;
+  }
+}
+@media (max-width: 980px) {
+
+}  
 </style>

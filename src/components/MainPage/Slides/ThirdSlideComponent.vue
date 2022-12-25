@@ -36,109 +36,164 @@ export default {
 </script>
 
 <style scoped>
+.main-wrapper {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 130vh;
+  margin-top: 50px;
+  margin: 50px auto;
+}
+.top-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.top-left-block {
+  width: 400px;
+  text-align: left;
+  margin-right: 100px;
+}
+.header-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.text-title {
+  font-size: 20px;
+}
+.top-right-block {
+  min-width: 442px;
+  height: 347px;
+  background: #6253FF;
+  border-radius: 20px;
+}
+
+.bottom-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: 50vw; */
+  margin: 120px auto 0 auto;
+}
+
+.bottom-left-block {
+  margin: 80px 20px 0 20px;
+  width: 442px;
+  text-align: left;
+}
+
+.bottom-right-block {
+  margin: 0px 20px 0 20px;
+  width: 442px;
+  text-align: left;
+}
+
+.bottom-left-placeholder {
+  width: 442px;
+  height: 541px;
+  background: #6253FF;
+  border-radius: 20px;
+}
+
+.achivment-row {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.achivment {
+  width: 100px;
+  height: 100px;
+  background: #6253FF;
+  border-radius: 50px;
+}
+.right-button {
+  margin-top: 300px;
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: 2px #6253FF solid;
+  color: #6253FF;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: all 0.5s ease-out;;
+  cursor: pointer;
+}
+
+.right-button:hover {
+  background: #6253FF;
+  color: #fff;
+}
+.background-color {
+  position: absolute;
+  top: 233px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #6253FF;
+  z-index: -1;
+  overflow:hidden;
+}
+
+
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 980px) {
   .main-wrapper {
-    position: relative;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    height: 130vh;
-    margin-top: 50px;
-    margin: 50px auto;
+    
+    height: auto;
   }
   .top-wrapper {
+    flex-direction: column;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50vw;
-    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    width: 80vw;
   }
-
   .top-left-block {
-    width: 400px;
-    text-align: left;
-  }
-  .header-title {
-    font-weight: bold;
-    font-size: 24px;
-  }
-  .text-title {
-    font-size: 20px;
+    width: 80vw;
   }
   .top-right-block {
-    min-width: 442px;
-    height: 347px;
-    background: #6253FF;
-    border-radius: 20px;
+    min-width: 80vw;
   }
-
   .bottom-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50vw;
-    margin: 120px auto 0 auto;
+    width: 80vw;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
   }
-
   .bottom-left-block {
-    margin: 80px 20px 0 20px;
-    width: 442px;
-    text-align: left;
-  }
-
-  .bottom-right-block {
-    margin: 0px 20px 0 20px;
-    width: 442px;
-    text-align: left;
-  }
-
-  .bottom-left-placeholder {
-    width: 442px;
-    height: 541px;
-    background: #6253FF;
-    border-radius: 20px;
-  }
-
-  .achivment-row {
-    margin-top: 50px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+    width: 100%;
+    text-align: left;
   }
-
-  .achivment {
-    width: 100px;
-    height: 100px;
-    background: #6253FF;
-    border-radius: 50px;
+  .bottom-right-block {
+    width: 100%;
+  }
+  .bottom-right-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+    width: 100%;
+    text-align: left;
+  }
+  .bottom-left-placeholder {
+    width: 100%;
   }
   .right-button {
-    margin-top: 300px;
-    width: 100%;
-    height: 60px;
-    background: transparent;
-    border: 2px #6253FF solid;
-    color: #6253FF;
-    font-size: 20px;
-    border-radius: 10px;
-    transition: all 0.5s ease-out;;
-    cursor: pointer;
-  }
-
-  .right-button:hover {
-    background: #6253FF;
-    color: #fff;
+    margin-top: 50px;
   }
   .background-color {
-    position: absolute;
-    top: 233px;
-    width: 100%;
-    height: 160%;
-    background-repeat: no-repeat;
-    opacity: 0.7;
-    background-image: url(@/assets/mainPageImages/thirdSlide/thirdbg.svg);
-    z-index: -1;
-    overflow:hidden;
-    border-radius: 0 0 50vw 50vw;
+    height: 90%;
   }
+}  
 </style>
