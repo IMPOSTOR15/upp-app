@@ -26,6 +26,7 @@
   <SecondSlideComponent/>
   <ThirdSlideComponent/>
   <FouthSlideComponent/>
+  
 </div>
   
   
@@ -36,13 +37,16 @@ import FirstSlideComponent from '@/components/MainPage/Slides/FirstSlideComponen
 import SecondSlideComponent from '@/components/MainPage/Slides/SecondSlideComponent.vue'
 import ThirdSlideComponent from '@/components/MainPage/Slides/ThirdSlideComponent.vue'
 import FouthSlideComponent from '@/components/MainPage/Slides/FourthSlideComponent.vue'
+
+
 export default {
   components: {
     FirstSlideComponent,
     SecondSlideComponent,
     ThirdSlideComponent,
-    FouthSlideComponent
-  }
+    FouthSlideComponent,
+  },
+  
 }
 </script>
 

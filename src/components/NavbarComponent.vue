@@ -43,17 +43,24 @@
     </nav>
 
     <div class="btn-container btn2">
-      <router-link class="cta" to="/login">
+      <!-- <router-link class="cta" to="/login"> -->
+      <div class="cta" @click="showModal">
         <p class="btn-text">Войти</p>
-      </router-link>
+      </div>
+      <!-- </router-link> -->
     </div>
   </div>
 </header>
-
+<loginModalWindow ref="modal" />
 </template>
 
 <script>
+import loginModalWindow from '@/components/MainPage/authorizationModalWindow/authorizationModalWindowCompanent.vue'
+
 export default {
+  components: {
+    loginModalWindow
+  },
   data(){
     return{
       isToggled: false, // показать/скрыть бургер (nav) - !проблема: в mounted не видит значение
@@ -68,6 +75,9 @@ export default {
       const nav = document.querySelector('nav')
 
       this.isToggled == false ? nav.style.display = 'none' : nav.style.display = 'grid'
+    },
+    showModal() {
+      this.$refs.modal.show = true
     }
   },
   mounted(){
