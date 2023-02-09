@@ -16,7 +16,7 @@
                 <label for="username" >Имя пользователя</label>
                 <input class="form-styling" type="text" name="username" placeholder=""/>
                 <label for="password">Пароль</label>
-                <input class="form-styling" type="text" name="password" placeholder=""/>
+                <input class="form-styling" type="password" name="password" placeholder=""/>
                 <input type="checkbox" id="checkbox"/>
                 <label for="checkbox" >
                   <span class="ui"></span>
@@ -32,7 +32,7 @@
                 <label for="email">Электронная почта</label>
                 <input class="form-styling" type="text" name="email" placeholder=""/>
                 <label for="password">Пароль</label>
-                <input class="form-styling" type="text" name="password" placeholder=""/>
+                <input class="form-styling" type="password" name="password" placeholder=""/>
                 <label for="confirmpassword">Подтвредить пароль</label>
                 <input class="form-styling" type="text" name="confirmpassword" placeholder=""/>
                 <a class="btn-signup">Зарегистрироваться</a>
@@ -411,12 +411,11 @@ label {
 
 [type="checkbox"]:not(:checked) + label .ui:before {
   content: "no";
-  left: 12px;
-  color: #6253FF;
+  left: 32px;
+  color: rgba(255,255,255,.7);
 }
 
 [type="checkbox"]:checked + label .ui:after {
-  left: -12px;
   content: "yes";
   color: #ffffff;
 }
