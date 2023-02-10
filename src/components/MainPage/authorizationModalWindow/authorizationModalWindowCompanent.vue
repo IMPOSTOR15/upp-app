@@ -103,7 +103,7 @@ export default {
   background: #fff;
   border-radius: 8px;
   /* padding: 15px; */
-  min-width: 420px;
+  min-width: 320px;
   max-width: 480px;
   position: absolute;
   top: 50%;
@@ -305,6 +305,8 @@ li {
 .form-signin input, .form-signup input {
   color: #000000;
   font-size: 15px;
+  max-width: 400px;
+  min-width: 200px;
 }
 
 .form-styling {
@@ -521,4 +523,21 @@ a.btn-signup:hover, a.btn-signin:hover {
   text-decoration: none;
 }
 
+@media (max-width: 980px) {
+  .modal {
+    width: 370px;
+  }
+  .frame {
+    width: 370px;
+  }
+  .form-signup {
+    left: 400px;
+    max-width: 370px;
+  }
+  .form-signin input, .form-signup input {
+    color: #000000;
+    font-size: 15px;
+    max-width: 300px;
+  }
+}
 </style>

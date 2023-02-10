@@ -35,9 +35,11 @@
       </ul>
       <ul class="ul_btn1">
         <div class="btn-container btn1">
-          <router-link class="cta" to="/login">
-            <p class="btn-text">Войти</p>
-          </router-link>
+          <!-- <router-link class="cta" to="/login"> -->
+            <div class="cta" @click="showModal">
+              <p class="btn-text">Войти</p>
+            </div>
+          <!-- </router-link> -->
         </div>
       </ul>
     </nav>
