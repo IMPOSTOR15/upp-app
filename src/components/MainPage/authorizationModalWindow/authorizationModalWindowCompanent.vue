@@ -155,6 +155,7 @@ html, body * { box-sizing: border-box; }
 
 .frame-long {
   height: 560px;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 72%, rgba(97,83,255,0.7) 100%);
 }
 
 .frame-short {
