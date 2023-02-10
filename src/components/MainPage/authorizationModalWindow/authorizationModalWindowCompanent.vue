@@ -8,8 +8,8 @@
             <div class="frame" :class="{'frame-long' : isRegistration}">
               <div class="nav">
                 <ul class = "links">
-                  <li :class="{ 'signin-active' : isLogin , 'signin-inactive' : isRegistration }" ><a class="btn" @click="changeToLogin">Вход</a></li>
-                  <li :class="{ 'signup-inactive' : isLogin, 'signup-active' : isRegistration}" ><a class="btn" @click="changeToRegistration">Регистрация</a></li>
+                  <li :class="{ 'signin-active' : isLogin , 'signin-inactive' : isRegistration }" ><a @click="changeToLogin">Вход</a></li>
+                  <li :class="{ 'signup-inactive' : isLogin, 'signup-active' : isRegistration}" ><a @click="changeToRegistration">Регистрация</a></li>
                 </ul>
               </div>
               <form class="form-signin" :class="{'form-signin-left' : isRegistration}" name="form">
@@ -37,7 +37,22 @@
                 <input class="form-styling" type="text" name="confirmpassword" placeholder=""/>
                 <a class="btn-signup">Зарегистрироваться</a>
               </form>
+              <!-- <div class="success">
+                <svg width="270" height="270" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" id="check" ng-class="checked ? 'checked' : ''">
+                  <path fill="#ffffff" d="M40.61,23.03L26.67,36.97L13.495,23.788c-1.146-1.147-1.359-2.936-0.504-4.314
+                    c3.894-6.28,11.169-10.243,19.283-9.348c9.258,1.021,16.694,8.542,17.622,17.81c1.232,12.295-8.683,22.607-20.849,22.042
+                    c-9.9-0.46-18.128-8.344-18.972-18.218c-0.292-3.416,0.276-6.673,1.51-9.578"
+                  />
+                </svg>
+                <div class="successtext" >
+                  <p> Спасибо за регистрацию! Проверьте электронную почту для подвтреждения.</p>
+                </div>
+              </div> -->
+              <div :class="{ 'forgot' : isLogin, 'forgot-left' : isRegistration}">
+                <a class="forgot-link" href="#">Забыли пароль?</a>
+              </div>
             </div>
+            
           </div>
         </slot>
       </div>
@@ -126,12 +141,9 @@ html, body * { box-sizing: border-box; }
 }
 
 .frame {
-  height: 575px;
+  height: 480px;
   width: 430px;
-  background:
-    linear-gradient(
-    rgba(35,43,85,0.75),
-    rgba(35,43,85,0.95));
+  background: linear-gradient(180deg, rgba(255,255,255,1) 65%, rgba(97,83,255,0.7) 100%);
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
@@ -142,7 +154,7 @@ html, body * { box-sizing: border-box; }
 }
 
 .frame-long {
-  height: 615px;
+  height: 560px;
 }
 
 .frame-short {
@@ -175,17 +187,17 @@ li {
 }
 
 .signin-active a {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   color: #000000;
   text-decoration: none;
-  border-bottom: solid 2px #1059FF;
+  border-bottom: solid 3px #6253FF;
   transition: all .25s ease;
   cursor: pointer;
 }
 
 .signin-inactive a {
   padding-bottom: 0;
-  color: rgba(255,255,255,.3);
+  color: #969696;
   text-decoration: none;
   border-bottom: none;
   cursor: pointer;
@@ -195,14 +207,15 @@ li {
   cursor: pointer;
   color: #000000;
   text-decoration: none;
-  border-bottom: solid 2px #1059FF;
-  padding-bottom: 10px;
+  border-bottom: solid 3px #6253FF;
+  padding-bottom: 5px;
 }
 
 .signup-inactive a {
   cursor: pointer;
-  color: rgba(255,255,255,.3);
+  color: #969696;
   text-decoration: none;
+  border-bottom: none;
   transition: all .25s ease;
 }
 
@@ -213,7 +226,7 @@ li {
 	font-weight: 300;
   padding-left: 37px;
   padding-right: 37px;
-  padding-top: 55px;
+  /* padding-top: 30px; */
   transition: opacity .5s ease, transform .5s ease;
 }
 
@@ -229,7 +242,7 @@ li {
 	font-weight: 300;
   padding-left: 37px;
   padding-right: 37px;
-  padding-top: 25px;
+  /* padding-top: 25px; */
   position: relative;
   top: -375px;
   left: 400px;
@@ -302,7 +315,7 @@ li {
   margin-bottom: 20px;
   background: rgba(255,255,255,.2);
   color: #000000;
-  background-color: #6153ff80;
+  background-color: #6153ff33;
 }
 
 label {
@@ -320,8 +333,8 @@ label {
 }
 
 .form-signin input:focus, textarea:focus, .form-signup input:focus, textarea:focus {
-    background: #6153ffc0;
-    border: none; 
+    background: #6153ff33;
+    border: #6253FF 2px solid; 
     padding-right: 40px;
     transition: background .5s ease;
  }
@@ -422,25 +435,25 @@ label {
   float: left;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 17px;
   text-align: center;
   color: #ffffff;
-  padding-top: 8px;
+  padding-top: 15px;
   width: 100%;
-  height: 35px;
+  height: 50px;
 	border: none;
-	border-radius: 20px;
+	border-radius: 10px;
   margin-top: 23px;
-  background-color: #1059FF;
+  background-color: #6153ffc0;
 }
 
 .btn-signin {
   float: left;
-  padding-top: 10px;
+  padding-top: 15px;
   width: 100%;
-  height: 35px;
+  height: 50px;
 	border: none;
-	border-radius: 20px;
+	border-radius: 10px;
   margin-top: -8px;
 }
 
@@ -448,15 +461,15 @@ label {
   float: left;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 17px;
   text-align: center;
   color: rgba(255,255,255, 1);
   padding-top: 8px;
   width: 100%;
-  height: 35px;
+  height: 50px;
 	border: none;
-	border-radius: 20px;
-  margin-top: 23px;
+	border-radius: 10px;
+  margin-top: 53px;
   background-color: #6153ffc0;
   left: 0px;
   top: 0px;
@@ -485,7 +498,7 @@ a.btn-signup:hover, a.btn-signin:hover {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 24px;
+  padding-top: 120px;
   margin-top: -535px;
   transition: all 0.5s ease;
 }
@@ -499,10 +512,11 @@ a.btn-signup:hover, a.btn-signin:hover {
   opacity: 0;
 }
 
-.forgot a {
-  color: rgba(255,255,255,.3);
+
+.forgot-link {
+  color: rgba(255, 255, 255);
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
 }
 
